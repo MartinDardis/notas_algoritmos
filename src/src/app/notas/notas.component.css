@@ -1,0 +1,11 @@
+.example-container {
+  overflow: auto;
+}
+.notas-section{
+  margin-right: 2%;
+  margin-left: 2%
+}
+
+table {
+  width: 100%;
+}
