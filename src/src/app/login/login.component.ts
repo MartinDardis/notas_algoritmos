@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
       });
     }, err => {
       this.spinner.hide();
-      if( err.error['text'] === 'OK'){
+      if( err.error['status'] === true ||  err.text ==== 'OK' ){
         swal.fire('Registrado', 'El email fue dado de alta, verifique su correo','success').then( resp => {
           this.router.navigateByUrl('/home');
         });
