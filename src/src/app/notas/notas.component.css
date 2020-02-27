@@ -1,11 +1,19 @@
 .example-container {
   overflow: auto;
 }
+
+@media(min-width: 500px ) {
+  .notas-section{
+    margin-right: 15%!important;
+    margin-left: 15%!important;
+  }
+}
 .notas-section{
   margin-top: 1%;
-  margin-right: 15%;
-  margin-left: 15%
+  margin-right: 1.5%;
+  margin-left: 1.5%
 }
+
 
 table {
   width: 100%;
