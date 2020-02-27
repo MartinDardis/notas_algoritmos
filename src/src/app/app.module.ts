@@ -23,6 +23,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {FlexModule} from "@angular/flex-layout";
 import {MatExpansionModule} from "@angular/material/expansion";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UserValidateComponent } from './user-validate/user-validate.component';
 
 
 
@@ -32,7 +33,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     NotasComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    UserValidateComponent
   ],
   imports: [
     BrowserModule,

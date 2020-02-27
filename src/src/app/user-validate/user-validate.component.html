@@ -1,0 +1,14 @@
+<ngx-spinner></ngx-spinner>
+<div class="card-auth">
+  <mat-card>
+    <mat-card-header>
+    </mat-card-header>
+    <mat-card-content>
+      <fa-icon [icon]="resultIcon" [size]="resultIconSize" [spin]="iconSpin"></fa-icon>
+      <p>{{resultMsg}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="goToLongin()" color="primary"  *ngIf="showGoToLogin">Ir al Login</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

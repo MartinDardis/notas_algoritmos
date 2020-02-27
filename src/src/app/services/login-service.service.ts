@@ -43,6 +43,10 @@ export class LoginService {
     return this.http.post(BACKEND_URL + "/user/signUp", body);
   }
 
+  doUserValidate(token) {
+    return this.http.get(BACKEND_URL + '/auth/' + token, {responseType: 'text'});
+  }
+
   getStatusObs() {
     return this.statusObs;
   }
