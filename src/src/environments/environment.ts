@@ -16,3 +16,4 @@ export const environment = {
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 
 export const BACKEND_URL = "http://localhost:1081";
+export const REPORT_BUG_FORM = "https://docs.google.com/forms/d/1T3AlPRUrXM_G2RHigUKj34YJ4Tr1XG4cUeclT-rylMA/viewform";

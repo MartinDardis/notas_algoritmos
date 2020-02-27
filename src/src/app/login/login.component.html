@@ -1,9 +1,9 @@
-  <mat-card class="example-card" style="margin-left: 40%;margin-right: 40%;margin-top: 10%">
+  <mat-card class="card-login" >
     <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
+      <mat-card-title class="login_title">Login</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p *ngIf="message !== null" style="color: darkred;align: center">{{message}}</p>
+      <p *ngIf="message !== null" class="err_msg_login">{{message}}</p>
       <form [formGroup]="loginForm" class="example-form">
         <table class="example-full-width" cellspacing="0">
           <tr>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LoginService} from "../services/login-service.service";
 import {Router} from "@angular/router";
 import {NotasService} from "./service/notas.service";
@@ -9,13 +9,13 @@ import {NotasService} from "./service/notas.service";
   styleUrls: ['./notas.component.css']
 })
 export class NotasComponent implements OnInit {
-  displayedColumns = ['label','grade','corrector'];
-  notas: Array<any> = [];
+  displayedColumns = ['label', 'grade', 'corrector'];
+  notas: any = [];
 
   constructor(private loginService: LoginService,
               private notasService: NotasService,
               private router: Router) {
-    if ( !this.loginService.isLogged() )
+    if (!this.loginService.isLogged())
       this.router.navigate(['/']);
     this.loadGrades();
   }
@@ -27,5 +27,17 @@ export class NotasComponent implements OnInit {
     this.notasService.getCalificaciones().subscribe(resp => {
       this.notas = resp;
     });
+  }
+
+  calcularPromedio() {
+    let suma = 0;
+    let grades = 0;
+    this.notas.forEach(nota => {
+      if (nota.grade !== undefined && nota.grade.length > 0){
+        suma += Number(nota.grade);
+        grades += 1;
+      }
+    });
+    return suma / grades;
   }
 }

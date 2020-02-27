@@ -1,3 +1,16 @@
 .backgorund-login {
   background: gray;
 }
+
+.card-login{
+  margin-left: 40%;margin-right: 40%;margin-top: 10%
+}
+
+.err_msg_login{
+  color: darkred;alignment: center
+}
+
+.example-full-width{
+  width: 100%;
+}
+

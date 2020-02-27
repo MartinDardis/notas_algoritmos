@@ -18,6 +18,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgxSpinnerModule } from "ngx-spinner";
 import {MatTableModule} from "@angular/material/table";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { FooterComponent } from './footer/footer.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {FlexModule} from "@angular/flex-layout";
+import {MatExpansionModule} from "@angular/material/expansion";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -26,7 +31,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     AppComponent,
     LoginComponent,
     NotasComponent,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +50,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     NgxSpinnerModule,
     MatTableModule,
     HttpClientModule,
+    MatGridListModule,
+    FlexModule,
+    MatExpansionModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

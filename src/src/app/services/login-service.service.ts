@@ -15,7 +15,7 @@ export class LoginService {
   private statusObs = new Subject();
 
   constructor(private http: HttpClient) {
-    const ud = sessionStorage.getItem('user');
+    const ud = localStorage.getItem('user');
     if (ud)
       this.userData = JSON.parse(ud);
 
@@ -29,7 +29,7 @@ export class LoginService {
       if (esp['token'] !== undefined) {
         this.userData.isLogged = true;
         this.userData.token = esp['token'];
-        sessionStorage.setItem('user', JSON.stringify(this.userData));
+        localStorage.setItem('user', JSON.stringify(this.userData));
         this.statusObs.next(this.userData);
       }
       return esp;
@@ -59,6 +59,6 @@ export class LoginService {
     this.userData.isLogged = false;
     this.userData.token = null;
     this.statusObs.next(this.userData);
-    sessionStorage.setItem('user', JSON.stringify(this.userData));
+    localStorage.setItem('user', JSON.stringify(this.userData));
   }
 }

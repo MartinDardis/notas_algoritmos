@@ -1,21 +1,22 @@
 <div class="notas-section">
-  <h1>Calificaciones</h1>
+  <h1 class="mat-h1">Calificaciones</h1>
+  <h3 class="mat-h3">Primedio general: {{calcularPromedio()}}</h3>
   <div class="example-container mat-elevation-z8">
     <table mat-table [dataSource]="notas">
       <!-- Position Column -->
       <ng-container matColumnDef="label">
-        <th mat-header-cell *matHeaderCellDef > Consigna </th>
+        <th mat-header-cell *matHeaderCellDef> Consigna</th>
         <td mat-cell *matCellDef="let element"> {{element.label}} </td>
       </ng-container>
       <!-- Name Column -->
       <ng-container matColumnDef="grade">
-        <th mat-header-cell *matHeaderCellDef> Calificación </th>
-        <td mat-cell *matCellDef="let element"> {{element.grade}} </td>
+        <th mat-header-cell *matHeaderCellDef> Calificación</th>
+        <td mat-cell *matCellDef="let element"> {{element.grade.length > 0 ? element.grade : '--'}} </td>
       </ng-container>
 
       <ng-container matColumnDef="corrector">
-        <th mat-header-cell *matHeaderCellDef> Corrector </th>
-        <td mat-cell *matCellDef="let element"> {{element.corrector}} </td>
+        <th mat-header-cell *matHeaderCellDef> Corrector</th>
+        <td mat-cell *matCellDef="let element"> {{element.corrector.length > 0 ?  element.corrector : '--'}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>

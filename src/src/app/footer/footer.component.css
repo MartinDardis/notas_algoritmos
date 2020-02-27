@@ -1,0 +1,15 @@
+.footer-toolbar{
+  position:fixed;
+  bottom: 0;
+}
+
+.btn-reportar-error{
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-reportar-error:hover{
+  text-decoration: none;
+  color: red;
+}
